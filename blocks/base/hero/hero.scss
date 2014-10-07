@@ -1,0 +1,81 @@
+.hero {
+
+  padding: 40px 30px;
+  height: 240px;
+
+  &_bg_basic {
+    background-color: #344966;
+  }
+
+  &__container {
+    display: block;
+    margin: 0 auto;
+    max-width: 900px;
+    height: inherit;
+    text-align: left;
+  }
+  &__container:before {
+    content: ' ';
+    display: inline-block;
+    width: 0;
+    margin-left: -.2em;
+    height: inherit;
+    vertical-align: middle;
+  }
+
+  &__content {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+  &__content_pos_top {
+    vertical-align: top;
+  }
+  &__content_pos_bottom {
+    vertical-align: bottom;
+  }
+
+  &__text {
+    display: table; // the poor man's width max-width
+    margin: 0 auto 0 0;
+    padding: 10px 14px;
+    font-size: 16px;
+    color: mix(#fff, #000, 95%);
+    text-decoration: none;
+    background: #111; // fallback
+    background: rgba(#000, .7);
+  }
+  &__text_size_big {
+    font-size: 28px;
+  }
+
+  &__cta-button {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 760px) {
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    &__text {
+      font-size: 16px;
+    }
+    &__text_size_big {
+      font-size: 30px;
+    }
+
+  }
+
+  @media screen and (min-width: 960px) {
+
+    &__text {
+      font-size: 18px;
+    }
+    &__text_size_big {
+      font-size: 34px;
+    }
+
+  }
+
+}

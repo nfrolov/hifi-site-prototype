@@ -1,0 +1,19 @@
+.logo {
+
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 50px;
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media screen and (min-width: 560px) {
+
+    font-size: 26px;
+
+  }
+
+}

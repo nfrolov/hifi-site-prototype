@@ -1,0 +1,17 @@
+.footer {
+
+  padding: 30px 30px 10px;
+  background: #efefef;
+  color: #555;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  &__text {
+    font-size: 14px;
+    margin: 0 0 20px;
+  }
+
+}

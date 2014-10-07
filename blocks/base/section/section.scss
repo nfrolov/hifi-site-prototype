@@ -1,0 +1,24 @@
+.section {
+
+  padding: 0 30px;
+
+  &_theme_alternative {
+    background-color: #f6f6f6;
+  }
+
+  &__container {
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 960px) {
+
+    &__container {
+      padding: 60px 0;
+    }
+
+  }
+
+}

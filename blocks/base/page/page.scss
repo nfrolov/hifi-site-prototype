@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+
+.page {
+
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+  font: 16px/1.625 Open Sans, sans-serif;
+  color: #222;
+
+  &__header {
+  }
+
+  &__main {
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+}

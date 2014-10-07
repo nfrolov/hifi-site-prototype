@@ -1,0 +1,20 @@
+.button {
+
+  display: inline-block;
+  padding: 10px 12px;
+  border: 2px solid rgba(#000, .3);
+  border-radius: 2px;
+  background-color: #4b9000;
+  background-clip: padding-box;
+  color: mix(#fff, #4b9000, 90%);
+  font-size: 15px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &_theme_important {
+    background-color: #da3b2e;
+    color: mix(#fff, #da3b2e, 90%);
+  }
+
+}

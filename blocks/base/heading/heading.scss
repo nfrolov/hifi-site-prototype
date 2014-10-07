@@ -1,0 +1,19 @@
+.heading {
+
+  margin: 0 0 20px;
+  font-size: 22px;
+
+  &_lvl_1 {
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 960px) {
+
+    &_lvl_1 {
+      font-size: 30px;
+    }
+
+  }
+
+}
