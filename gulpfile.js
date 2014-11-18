@@ -7,7 +7,10 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     flatten = require('gulp-flatten'),
     browsersync = require('browser-sync'),
-    reload = browsersync.reload.bind(null, {stream: true});
+    reload = browsersync.reload.bind(null, {stream: true}),
+    glob = require('glob'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream');
 
 
 function watch(glob, tasks) {
@@ -46,10 +49,14 @@ gulp.task('blocks:styles', function () {
 });
 
 gulp.task('blocks:scripts', function () {
-  return gulp.src(['blocks/util/**/*.js', 'blocks/base/**/*.js', 'blocks/main/**/*.js'])
-    .pipe(sourcemaps.init())
-    .pipe(concat('bundle.js'))
-    .pipe(sourcemaps.write({includeContent: false}))
+  var entries = [].concat(
+    glob.sync('./blocks/util/**/*.js'),
+    glob.sync('./blocks/base/**/*.js'),
+    glob.sync('./blocks/main/**/*.js')
+  );
+  return browserify({entries: entries, debug: true})
+    .bundle()
+    .pipe(source('bundle.js'))
     .pipe(gulp.dest('dist/assets'))
     .pipe(reload());
 });

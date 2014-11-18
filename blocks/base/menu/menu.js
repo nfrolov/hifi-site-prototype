@@ -1,21 +1,17 @@
-(function (document) {
+var menu = document.querySelector('.menu');
 
-  var menu = document.querySelector('.menu');
+if (!menu) {
+  return;
+}
 
-  if (!menu) {
-    return;
-  }
+var toggle = document.createElement('button');
 
-  var toggle = document.createElement('button');
+toggle.type = 'button';
+toggle.className = 'menu__toggle';
+toggle.textContent = menu.getAttribute('aria-label');
 
-  toggle.type = 'button';
-  toggle.className = 'menu__toggle';
-  toggle.textContent = menu.getAttribute('aria-label');
+toggle.addEventListener('click', function () {
+  menu.classList.toggle('menu_active');
+}, false);
 
-  toggle.addEventListener('click', function () {
-    menu.classList.toggle('menu_active');
-  }, false);
-
-  menu.insertBefore(toggle, menu.firstChild);
-
-})(document);
+menu.insertBefore(toggle, menu.firstChild);
