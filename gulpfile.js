@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     del = require('del'),
-    merge = require('merge-stream'),
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
